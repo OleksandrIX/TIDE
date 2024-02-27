@@ -1,0 +1,100 @@
+.analytics {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: relative;
+    gap: 16px;
+}
+
+.analytics>canvas {
+    border-bottom: 1px solid black;
+    padding-bottom: 8px;
+}
+
+.analytics__title {
+    position: absolute;
+    top: 20px;
+    font-size: 1.8rem;
+    font-style: italic;
+}
+
+.analytics__start {
+    border: 0;
+    background-color: #707276;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .8s;
+}
+
+.analytics__start:hover {
+    background-color: #A0A6AFFF;
+    color: #707276;
+}
+
+.file_explorer {
+    width: 25%;
+    border-left: 1px black solid;
+    overflow: auto;
+}
+
+table {
+    margin: 5px;
+    border-collapse: collapse;
+    text-align: left;
+    max-width: 25vw;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    word-wrap: anywhere;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+
+    button,
+    label {
+        cursor: pointer;
+        transition: .5s;
+    }
+}
+
+.file_name {
+    font-size: 14px;
+    color: rgb(128, 128, 128);
+    font-style: italic;
+}
+
+.file_upload_label:hover {
+    color: #2196F3;
+}
+
+.ac-trigger,
+.ac-text {
+    word-wrap: anywhere;
+}
+
+.accordion-container {
+    margin: 5px;
+    width: 100%;
+}
+
+.ac-text {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        cursor: pointer;
+    }
+}
+
+.chart {
+    width: 100%;
+}

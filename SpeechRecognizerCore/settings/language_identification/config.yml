@@ -1,0 +1,11 @@
+lid_model:
+  models_dir: "lid-models"
+
+  lid_model_train_settings:
+    epochs: 1
+    batch_size: 32
+
+lid_dataset:
+  path: "/path/to/dataset"
+  train_dir: "train"
+  test_dir: "test"

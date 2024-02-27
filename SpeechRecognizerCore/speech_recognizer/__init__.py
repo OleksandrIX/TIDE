@@ -1,0 +1,2 @@
+import speech_recognizer.speech_recognizer as text_reco
+import speech_recognizer.config as text_reco_config

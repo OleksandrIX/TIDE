@@ -1,0 +1,191 @@
+[
+  {
+    "id": "general",
+    "title": "Genral",
+    "items": [
+      {
+        "id": "microphone",
+        "label": "Microphone",
+        "type": "select",
+        "selected": "",
+        "require": true,
+        "options": []
+      },
+      {
+        "id": "sample_rate",
+        "label": "Sample rate",
+        "type": "number",
+        "value": 44100,
+        "require": true
+      },
+      {
+        "id": "channels",
+        "label": "Channels",
+        "type": "number",
+        "value": 2,
+        "require": true
+      },
+      {
+        "id": "voice_threshold",
+        "label": "Voice threshold",
+        "type": "number",
+        "value": -45,
+        "require": true
+      },
+      {
+        "id": "voice_end_delay",
+        "label": "Voice end delay",
+        "type": "number",
+        "value": 2,
+        "require": true
+      }
+    ]
+  },
+  {
+    "id": "denoise",
+    "title": "Denoise",
+    "items": [
+      {
+        "id": "is_model",
+        "label": "Noice Reduce RNN",
+        "type": "toggler",
+        "value": false
+      },
+      {
+        "id": "is_spectral_gating",
+        "label": "Using spectral gate",
+        "type": "toggler",
+        "value": true
+      },
+      {
+        "id": "volume",
+        "label": "Volume (dB) increase/decrease",
+        "type": "number",
+        "require": true,
+        "value": 2
+      }
+    ]
+  },
+  {
+    "id": "identification",
+    "title": "Identification(LID)",
+    "items": [
+      {
+        "id": "model",
+        "label": "Model local / Model remote",
+        "type": "toggler-between",
+        "value": false,
+        "require": true,
+        "items": [
+          {
+            "id": "model_local",
+            "label": "Local path",
+            "type": "file",
+            "require": true,
+            "value": "CNNModel-final-97.22.pth"
+          },
+          {
+            "id": "model_remote",
+            "label": "Remote url",
+            "type": "text",
+            "require": true
+          }
+        ]
+      },
+      {
+        "id": "lang_tag",
+        "type": "double-input-list",
+        "first_label": "Languages",
+        "second_label": "Codes",
+        "require": true,
+        "items": {
+          "de": [
+            "de-DE",
+            "de-AT",
+            "de-CH"
+          ],
+          "en": [
+            "en-GB",
+            "en-US"
+          ],
+          "es": [
+            "es-ES",
+            "es-CL",
+            "es-MX",
+            "es-419"
+          ],
+          "nl": [
+            "nl-NL"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "azure_api",
+    "title": "Azure API",
+    "items": [
+      {
+        "id": "azure_account_name",
+        "label": "Account name",
+        "type": "text",
+        "require": true
+      },
+      {
+        "id": "azure_account_key",
+        "label": "Account key",
+        "type": "password",
+        "require": true
+      },
+      {
+        "id": "azure_container_name",
+        "label": "Container name",
+        "type": "text",
+        "require": true
+      },
+      {
+        "id": "azure_test_connection",
+        "text": "Test connection",
+        "type": "button",
+        "on_click": "AZURE_TEST_CONNECTION"
+      }
+    ]
+  },
+  {
+    "id": "sphinx",
+    "title": "Sphinx",
+    "items": [
+      {
+        "id": "sphinx_list_dirs",
+        "label": "Allowed Sphinx models",
+        "type": "list-dirs",
+        "path": "./settings/speech_recognition",
+        "items": []
+      }
+    ]
+  },
+  {
+    "id": "api",
+    "title": "API",
+    "items": [
+      {
+        "id": "SPHINX",
+        "label": "Using Sphinx (Locally)",
+        "type": "toggler",
+        "value": false
+      },
+      {
+        "id": "WHISPER",
+        "label": "Using Whisper (Locally)",
+        "type": "toggler",
+        "value": false
+      },
+      {
+        "id": "AZURE",
+        "label": "Using Open AI (Remote)",
+        "type": "toggler",
+        "value": false
+      }
+    ]
+  }
+]

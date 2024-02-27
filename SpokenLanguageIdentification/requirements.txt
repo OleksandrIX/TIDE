@@ -1,0 +1,6 @@
+loguru
+librosa
+numpy
+torch
+torchvision
+pyyaml

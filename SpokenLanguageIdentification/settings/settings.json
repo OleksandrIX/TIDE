@@ -1,0 +1,28 @@
+{
+  "identification": {
+    "model": {
+      "is_model_remote": false,
+      "model_local": "CNNModel-final-61.30.pth"
+    },
+    "lang_tag": {
+      "de": [
+        "de-DE"
+      ],
+      "en": [
+        "en-US"
+      ],
+      "es": [
+        "es-ES"
+      ],
+      "nl": [
+        "nl-NL"
+      ],
+      "ru": [
+        "ru-RU"
+      ],
+      "uk": [
+        "uk-UA"
+      ]
+    }
+  }
+}

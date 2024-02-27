@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "nstt-dataset"
+version = "0.1.0"
+description = ""
+authors = ["OleksandrIX <zagorenkosasha@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "wiki_yt_dataset" }]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "1.26.3"
+scikit-learn = "^1.4.0"
+polyglot = "^16.7.4"
+tqdm = "^4.66.1"
+wikiextractor = "^3.0.6"
+click = "^8.1.7"
+youtube-dl = "^2021.12.17"
+loguru = "^0.7.2"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+wiki-yt-dataset = "wiki_yt_dataset.__main__:cli"

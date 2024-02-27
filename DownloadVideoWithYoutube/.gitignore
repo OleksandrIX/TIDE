@@ -1,0 +1,9 @@
+.idea
+.vscode
+
+logs/**/*
+*.log
+
+.env
+
+lid_model/logs/**/*

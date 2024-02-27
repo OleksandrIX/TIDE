@@ -1,0 +1,40 @@
+# IDE files
+.idea
+.vscode
+
+# Logs files
+logs
+/**/*.log
+/*.log
+
+# Cache files
+__pycache__
+
+# Audio files
+*.wav
+*.mp3
+*.mp4
+*.ogg
+*.opus
+*.acc
+
+
+# Environment and configuration files
+.env
+/**/.env
+*.ini
+
+# Credentials files
+*_credentials.json
+/**/*_credentials.json
+
+# Data store
+data_store/**
+
+# Settings
+/settings/settings.json
+/settings/language_identification/*.pth
+
+# LID
+/language_identification/**/*.png
+/settings/language_identification/lid-models/**/*

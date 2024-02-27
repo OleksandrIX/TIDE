@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/settings.css">
+    <link rel="stylesheet" href="./vendor/toastify/toastify.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+<div class="root">
+    <div class="navigation">
+        <div class="nav-menu">
+            <ul>
+                <li><a href="main.html">Main</a></li>
+                <li><a href="./settings.html">Settings</a></li>
+                <li><a href="./spy.html">Spy</a></li>
+                <li><a href="./logs.html">Logs</a></li>
+            </ul>
+        </div>
+        <div id="voice_activity" class="voice_activity">
+            <p class="session-name-wave">Session name: <span id="session-name"></span></p>
+            <div class="active-marker">
+
+            </div>
+            <!--Here The Audio File Spectrogram Activity сру 😺🐈-->
+        </div>
+    </div>
+    <div class="main">
+        <h1 class="title">Settings</h1>
+        <div id="settings_form">
+        </div>
+    </div>
+
+    <div id="loader_container" class="loader-inactive">
+        <!-- Here the loader -->
+    </div>
+</div>
+<script src="./js/settings.js"></script>
+<script src="./js/azure.js"></script>
+<script src="./js/utils.js"></script>
+<script type="text/javascript" src="/eel.js"></script>
+<script type='module' src="js/spy/activity_spectogram.js"></script>
+<script src="./vendor/toastify/toastify.min.js"></script>
+</body>
+
+</html>

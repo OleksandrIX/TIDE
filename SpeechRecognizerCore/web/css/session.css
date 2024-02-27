@@ -1,0 +1,249 @@
+.session-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .session-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .session-info {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 10px 15px;
+            background-color: #f0f0f0;
+            border: 2px black solid;
+            border-radius: 5px;
+
+            .session_activity {
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+
+                    span {
+                        font-weight: normal;
+                        font-style: italic;
+                    }
+                }
+            }
+
+            .voice_activity {
+                flex: 1;
+            }
+        }
+
+        .session-control {
+            background-color: #f0f0f0;
+            border: 2px black solid;
+            border-radius: 5px;
+            margin: 5px;
+
+            button {
+                display: none;
+                border: 0;
+                cursor: pointer;
+                transition: .5s;
+
+                img {
+                    height: auto;
+                    width: 64px;
+                }
+            }
+
+            button.active {
+                display: block;
+            }
+
+            button:hover {
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+
+    .session-body {
+        flex: 1;
+        overflow-y: auto;
+        margin-top: 20px;
+
+        .files {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .group-audio-files {
+                border: 2px black solid;
+                padding: 5px 10px;
+            }
+
+            .empty-groups {
+                margin-top: 20px;
+                font-size: 2rem;
+                font-weight: bold;
+                font-style: italic;
+                text-align: center;
+            }
+        }
+    }
+
+    .logs {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        label {
+            font-size: 1.3rem;
+        }
+
+        textarea {
+            resize: none;
+            height: 200px;
+            width: 100%;
+            font-size: 18px;
+        }
+    }
+}
+
+.accordion-container.group-audio-files:hover {
+    background-color: #f0f0f0;
+    cursor: auto;
+}
+
+.group-audio-files {
+    .accordion-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+
+        p {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            position: relative;
+            margin: 0 30px;
+            max-width: 50%;
+            border: 1px black solid;
+            border-radius: 5px;
+            padding: 5px;
+
+            .file-link {
+                color: black;
+                font-weight: bold;
+                font-style: italic;
+                text-decoration: none;
+                font-size: 1.4rem;
+            }
+
+            .delete-audio-btn {
+                display: inline-block;
+                height: 100%;
+                color: white;
+                font-weight: normal;
+                font-style: normal;
+                background-color: #7d0e0e;
+                cursor: pointer;
+                padding: 0 5px;
+                font-size: 1.3rem;
+                border-radius: 5px;
+                transition: .5s;
+            }
+
+            .delete-audio-btn:hover {
+                background-color: rgba(125, 14, 14, 0.8);
+            }
+        }
+
+        p::before {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 8px;
+            width: 8px;
+            border-radius: 100%;
+            background-color: black;
+            top: 50%;
+            left: -20px;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+
+.slider.round {
+    border-radius: 17px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.session-controls {
+    display: flex;
+    gap: 16px;
+    padding: 8px 0;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#spy_language_to_use_div, #spy_auto_azure_uploading, #spy_control_pipeline {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}

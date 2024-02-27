@@ -1,0 +1,2 @@
+from .download_wiki_dumps import download_wiki_dumps
+from .extract_wiki_dumps import extract_wiki_dumps

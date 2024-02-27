@@ -1,0 +1,8 @@
+loguru==0.7.2
+pyyaml==6.0.1
+numpy==1.26.0
+imageio==2.30.0
+scipy==1.11.4
+tensorflow==2.15.0.post1
+keras-preprocessing==1.1.2
+keras-applications==1.0.8

@@ -1,0 +1,33 @@
+# IDE files
+.idea
+/**/.idea
+.vscode
+/**/.vscode
+
+# Logs files
+/**/logs
+/**/*.log
+/*.log
+
+# Cache files
+__pycache__
+
+# Audio files
+*.wav
+*.mp3
+*.mp4
+*.ogg
+*.opus
+*.acc
+
+# Credentials files
+*_credentials.json
+/**/*_credentials.json
+
+# Data store
+data_store/**
+/*/data_store/**
+/**/data_store/**
+
+# Models (PyTorch)
+/**/*.pth
